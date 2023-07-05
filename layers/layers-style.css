@@ -3,17 +3,26 @@
 /*shared styles for all layers*/
 
 .layer-content{
+    box-sizing: border-box;
+    justify-content: center;
     text-align:center;
-    font-size: 25px;
+    font-size: 22px;
     white-space: pre;
     font-weight: 900;
+    height:auto;
+    color:#00FF00;
+    background-color:#353434;
+}
+.layer-border{
     color:#00FF00;
     background-color:#353434;
     border-width: 5px;
     border-style: dotted;
-    height:96vh;
+    margin:0;
+    padding:10px;
 }
-#layer1LoginButton{
+.layerButton{
+    justify-content: center;
     background-color: #4CAF50; /* Green */
     border: none;
     color: black;
@@ -25,13 +34,13 @@
     border-radius:4px;
     transition:0.3s;
 }
-#layer1LoginButton:hover{
+.layerButton:hover{
     background-color:red;
     color:white;
     font-weight:900;
 }
 /* Additional styles, specific to layer 1*/
 .layer2-specific{
-    font-size:10px;
+    font-size:80%;
 
 }

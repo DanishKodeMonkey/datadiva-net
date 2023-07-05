@@ -3,10 +3,21 @@
 <head>
   <title>Layer 1</title>
   <link rel="stylesheet" type="text/css" href="layers-style.css">
-  <script src="/script.js"></script> <!-- Reference to JavaScript file -->
+  <!--Page specific function for the button below.-->
+  <script>
+    //button function for layer1
+function grantAccess() {
+    var status = document.getElementById('status');
+    status.textContent = 'Access granted, welcome home DD';
+
+    setTimeout(function(){
+      window.location.href = 'layer2.html';
+    },2000) //time delay before
+}
+  </script>
 </head>
 <body>
-<div class="layer-content">
+<div class="layer-content layer-border">
     <pre>
 .--------.
 / .------. \
@@ -17,12 +28,15 @@ _| |________| |_
 '._____ ____ _____.'
 |     .'____'.     |
 '.__.'.'    '.'.__.'
-'.__  |<button id="layer1LoginButton" onclick="grantAccess()">/BREACH</button>|  __.'
+'.__  |<button id="layer1LoginButton" class="layerButton" onclick="grantAccess()">/BREACH</button>|  __.'
 |   '.'.____.'.'   |
 '.____'.____.'____.'
 '.________________.'
 <div id="status">ACCESS DENIED - BUGGER OFF!</div>
     </pre>
 </div>
+
+<!--Main script reference-->
+<script src="/script.js"></script>  
 </body>
 </html>

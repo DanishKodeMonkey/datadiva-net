@@ -7,7 +7,6 @@
     <title>DataDiva Net Architecture</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> 
-    <script src="script.js"></script>  
 </head>
 <body>
 <div class="header">
@@ -27,15 +26,16 @@
         <a href="#" class="layer-button" onclick="navigateToLayer('layer8')">/LVL_7/</a>
         <a href="#" class="layer-button" onclick="navigateToLayer('layer9')">/LVL_8/</a>
         <a href="#" class="layer-button" onclick="navigateToLayer('layer10')">/LVL_9/</a>
-        <a href="#" class="layer-button" onclick="navigateToLayer('layer11')">@CORE</a>
+        <a href="#" class="layer-button" onclick="navigateToLayer('layer11')">@ROOT</a>
     </div>
     <div id="layerContainer">
-        <iframe src="layers/layer1.html" frameborder="0"></iframe>
+        <iframe id ="layerFrame" src="layers/layer1.html" frameborder="0"></iframe>
     </div>
 </div>
 <footer class="footer">
     Property of DataDiva DONT COPY MY SHIT!
 </footer>
-
+<!--Main script reference-->
+<script src="script.js"></script>  
 </body>
 </html>

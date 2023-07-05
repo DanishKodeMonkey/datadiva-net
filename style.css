@@ -8,6 +8,8 @@ body{
   display:flex;
   flex-direction: column;
 }
+
+
 /* Header titlebox */
 .header {
     font-family:'Press Start 2P';
@@ -80,6 +82,7 @@ body{
     background-color: #00FF00;
     color:black;
   }
+
 /* Adjust iframe styling */
 #layerContainer {
   flex:1;
@@ -94,5 +97,6 @@ body{
   margin:0;
   padding:0;
 }
-
-
+iframe{
+  transition: opacity 0.3s ease-in-out;
+}

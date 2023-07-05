@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Layer </title>
+  <title>Layer 3</title>
   <link rel="stylesheet" type="text/css" href="layers-style.css">
-  <script src="/script.js"></script> <!-- Reference to JavaScript file -->
 </head>
 <body>
-3
+<div class="layer-content layer-border">
+<h1>_LOG#0091</h1>
+<div id="logText" style="display: none;">
+  <h2>I got hired</h2>
+  <p>this massive fragger came at me today. <br>
+  Was damn close to busting his face in right then and there. <br>
+  Something 'bout his look, his stride, just got my circuits sparking. <br>
+
+  A friggin' corpo scum, I knew it. <br> 
+  I can sniff those chromeheads from a klick away. <br>
+  He goes by AU, but I already dug up his real handle ///<br>
+  He babbled alot, said he's slaving away for some small-time outfit<br> 
+  Sentinel Solutions, a drekkin' contract crew for odd gigs. <br>
+  And the mofo needed a netrunner. <br>
+  
+  Considering I've already been carving out a rep for myself,<br> 
+  he figured I was the perfect fit.<br>
+  Money talks, I guess...<br>
+  And the gig itself lines up with a prime chance to screw with Arasaka.<br></p>
+  </div>
+  <button id="layer3-button" class="layerButton" onclick="revealText()">Eye-dee LOG#0091</button>
+</div>
+
+<!--Main script reference-->
+<script src="/script.js"></script>  
+<!--Layer specific script-->
+<script>
+  function revealText() {
+    var logText = document.getElementById("logText");
+    logText.style.display = "block";
+    
+    var text = logText.innerText.trim(); // Use innerText instead of innerHTML
+    
+    logText.innerText = ""; // Clear the content
+    
+    var index = 0;
+    var speed = 5; // Adjust typing speed here (in milliseconds)
+    
+    function typeWriter() {
+      if (index < text.length) {
+        logText.innerText += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, speed);
+      }
+    }
+    
+    typeWriter();
+  }
+  document.getElementById("layer3-button").addEventListener("click", function() {
+  document.getElementById("logText").style.display = "block";
+  this.remove(); // Remove the button
+});
+</script>
 </body>
 </html>

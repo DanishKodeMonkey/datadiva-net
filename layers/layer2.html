@@ -3,11 +3,10 @@
 <head>
   <title>Layer 2</title>
   <link rel="stylesheet" type="text/css" href="layers-style.css">
-  <script src="/script.js"></script> <!-- Reference to JavaScript file -->
 </head>
 <body>
-<div class="layer-content layer2-specific">
-    <pre>
+<div class="layer-content layer2-specific layer-border">
+    <pre id="layer2Content">
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⣀⣴⡯⠖⣓⣶⣶⡶⠶⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡀⠀⢀⣴⣯⡾⣻⠽⡾⠽⠛⠚⠷⠯⠥⠤⠤⣤⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣤⣢⣾⢿⣶⠿⣻⠿⠿⢋⣁⣠⠤⣶⢶⡆⠀⣀⣀⣀⣀⣀⣐⡻⢷⣦⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
@@ -41,8 +40,31 @@
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢹⣿⠟⠁⠀⠀⠀⠀⠙⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠸⣿⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
             ⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
-        <h1>SECURITY BREACH</h1>
+        <h1>SECURITY BREACH!</h1>
+        <button id="changeButton" class="layerButton">_DISABLE</button>
     </pre>
 </div>
+
+<!--Main script reference-->
+<script src="/script.js"></script>  
+<!--Layer specific script-->
+<script>
+  //Event handler for button
+document.addEventListener('DOMContentLoaded', function() {
+  var changeButton = document.getElementById('changeButton');
+  var layer2Content = document.getElementById('layer2Content');
+  //When pressed, change text on layer
+  changeButton.addEventListener('click', function() {
+    layer2Content.innerHTML = '<h1>Security disabled</h1>';
+  //After delay, move to layer 3
+    // Wait for 3 seconds (3000 milliseconds)
+    setTimeout(function() {
+      // Move to layer 3 by updating the window location
+      window.location.href = 'layer3.html';
+    }, 3000);
+  });
+});
+
+</script>
 </body>
 </html>
