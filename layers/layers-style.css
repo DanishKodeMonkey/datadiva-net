@@ -44,3 +44,49 @@
     font-size:80%;
 
 }
+.layer11-specific{
+    height:100%;
+    background: #000000;
+    background: -moz-linear-gradient(top, #000000 0%, #FF0000 100%);
+    background: -webkit-linear-gradient(top, #000000 0%, #FF0000 100%);
+    background: linear-gradient(to bottom, #000000 0%, #FF0000 100%);
+
+}
+.rootButton{
+    justify-content: center;
+    background-color: #00ff08; /* Green */
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 100px;
+    border-radius:4px;
+    transition:0.3s;
+}
+.rootButton:hover{
+    background-color:red;
+    color:white;
+    font-weight:900;
+}
+.marquee {
+    position: relative;
+    width: 100vw;
+    max-width: 100%;
+    height: 200px;
+    overflow-x: hidden;
+  }
+  
+  .track {
+    position: absolute;
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 32s linear infinite;
+  }
+  
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  
